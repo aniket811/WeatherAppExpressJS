@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreca</title>
+</head>
+<body>
+    <!-- <h1>Welcome to EJS</h1> -->
+    <div class="container">
+        <header>
+            <div class="compass-icon">
+                <i class="fa-solid fa-compass" ></i>
+            </div>
+        </header>
+        <div class="weather-icon">
+            <h1>Simply Weather</h1>
+            <p>Know the current weather of your city</p>
+        </div>
+
+    </div>
+    <form action="" method="post">
+        <input type="text" name="city" id="input-city" placeholder="Enter a city">
+
+    </form>
+    <div class="result">
+        <% if (temp!==null){%>
+            <h1 class="temp">
+              <%=temp%> 
+            </h1> 
+
+        <%}%>
+        <div class="icons-des">
+            
+            <% if (icon!==null){%>
+                <img src="http://openweathermap.org/img/w/<%=icon%>.png" alt="" class="icon">
+            </h1> 
+            
+            <% } %>
+             
+            <% if (des!==null){%>
+                <h3><%=des%></h3>
+                
+                <% } %>
+                
+                <% if (city!==null){%>
+                    
+                    <p class="city"><%=city%>
+                    </p>
+                    
+                    <% } %>
+
+    </div> 
+    </div>
+    </body>
+    
+    <script src="https://kit.fontawesome.com/27e7b7443d.js" crossorigin="anonymous"></script>
+</body>
+</html>
